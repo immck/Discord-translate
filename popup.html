@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Discord Translator</title>
+    <style>
+      body {
+        width: 260px;
+        margin: 0;
+        padding: 14px;
+        color: #dbdee1;
+        background: #1e1f22;
+        font: 13px/1.4 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        color: #f2f3f5;
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 10px;
+      }
+
+      input[type="text"] {
+        width: 92px;
+        box-sizing: border-box;
+        border: 1px solid #3f4147;
+        border-radius: 4px;
+        padding: 5px 7px;
+        color: #f2f3f5;
+        background: #2b2d31;
+      }
+
+      input[type="password"] {
+        width: 92px;
+        box-sizing: border-box;
+        border: 1px solid #3f4147;
+        border-radius: 4px;
+        padding: 5px 7px;
+        color: #f2f3f5;
+        background: #2b2d31;
+      }
+
+      input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+      }
+
+      button {
+        width: 100%;
+        height: 32px;
+        margin-top: 14px;
+        border: 0;
+        border-radius: 4px;
+        color: #ffffff;
+        background: #5865f2;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #4752c4;
+      }
+
+      button.secondary {
+        margin-top: 8px;
+        color: #dbdee1;
+        background: #313338;
+      }
+
+      button.secondary:hover {
+        background: #3f4147;
+      }
+
+      .hint {
+        margin-top: 10px;
+        color: #949ba4;
+        font-size: 12px;
+      }
+
+      .version {
+        margin-top: 8px;
+        color: #6d737d;
+        font-size: 11px;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Discord Translator</h1>
+
+    <label>
+      Enable plugin
+      <input id="enabled" type="checkbox">
+    </label>
+
+    <label>
+      Target language
+      <input id="targetLang" type="text" spellcheck="false">
+    </label>
+
+    <label>
+      Auto translate
+      <input id="autoTranslate" type="checkbox">
+    </label>
+
+    <label>
+      Right-click translate
+      <input id="rightClickTranslate" type="checkbox">
+    </label>
+
+    <label>
+      Cache
+      <input id="cacheEnabled" type="checkbox">
+    </label>
+
+    <label>
+      Compact result
+      <input id="compactMode" type="checkbox">
+    </label>
+
+    <label>
+      Microsoft Key
+      <input id="microsoftKey" type="password" autocomplete="off">
+    </label>
+
+    <label>
+      Microsoft Region
+      <input id="microsoftRegion" type="text" placeholder="optional" spellcheck="false">
+    </label>
+
+    <label>
+      DeepL Key
+      <input id="deeplKey" type="password" autocomplete="off">
+    </label>
+
+    <button id="toggleEnabled" type="button" class="secondary">Disable plugin</button>
+    <button id="save" type="button">Save</button>
+    <button id="rescan" type="button" class="secondary">Rescan visible messages</button>
+    <div class="hint">Right-click text on Discord, Twitter, Reddit, or any web page.</div>
+    <div class="version">v1.2.0</div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
